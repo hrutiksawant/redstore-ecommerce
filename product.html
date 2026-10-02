@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px" alt="RedStore Logo"></a>            
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+        </div>
+    </div>
+
+    <!-- All Products & Search Section -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="searchInput" placeholder="Search shoes, t-shirt, watch..." style="padding: 8px 15px; border: 1px solid #ff523b; border-radius: 20px; outline: none; font-size: 14px; width: 220px;">
+                
+                <select id="priceSort">
+                    <option value="default">Default Sorting</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row" id="productRow">
+            
+            <!-- Shoes 1 -->
+            <div class="col-4" data-name="shoes footwear sneakers shoes1" data-price="80">
+                <a href="product-details.html?item=shoes1"><img src="images/shoes1.jpg" alt="Shoes 1"></a>
+                <a href="product-details.html?item=shoes1"><h4>Stylish Casual Shoes</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$80.00</p>
+            </div>
+
+            <!-- Shoes 2 -->
+            <div class="col-4" data-name="shoes footwear formal shoes2" data-price="95">
+                <a href="product-details.html?item=shoes2"><img src="images/shoes2.jpg" alt="Shoes 2"></a>
+                <a href="product-details.html?item=shoes2"><h4>Classic Formal Shoes</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$95.00</p>
+            </div>
+
+            <!-- Shoes 3 -->
+            <div class="col-4" data-name="shoes footwear sports shoes3" data-price="85">
+                <a href="product-details.html?item=shoes3"><img src="images/shoes3.jpg" alt="Shoes 3"></a>
+                <a href="product-details.html?item=shoes3"><h4>Sporty White Sneakers</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$85.00</p>
+            </div>
+
+            <!-- Shoes 4 -->
+            <div class="col-4" data-name="shoes footwear leather shoes4" data-price="110">
+                <a href="product-details.html?item=shoes4"><img src="images/shoes4.jpg" alt="Shoes 4"></a>
+                <a href="product-details.html?item=shoes4"><h4>Premium Leather Shoes</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$110.00</p>
+            </div>
+
+            <!-- T-Shirt 1 -->
+            <div class="col-4" data-name="cloth t-shirt shirt t-shirt1 apparel" data-price="45">
+                <a href="product-details.html?item=tshirt1"><img src="images/T-shirt1.jpg" alt="T-Shirt 1"></a>
+                <a href="product-details.html?item=tshirt1"><h4>Classic Polo T-Shirt</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$45.00</p>
+            </div>
+
+            <!-- T-Shirt 2 -->
+            <div class="col-4" data-name="cloth t-shirt shirt t-shirt2 apparel" data-price="50">
+                <a href="product-details.html?item=tshirt2"><img src="images/T-shirt2.jpg" alt="T-Shirt 2"></a>
+                <a href="product-details.html?item=tshirt2"><h4>Slim Fit Black T-Shirt</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <!-- T-Shirt 3 -->
+            <div class="col-4" data-name="cloth t-shirt shirt t-shirt3 apparel" data-price="55">
+                <a href="product-details.html?item=tshirt3"><img src="images/T-shirt3.jpg" alt="T-Shirt 3"></a>
+                <a href="product-details.html?item=tshirt3"><h4>Graphic Printed T-Shirt</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$55.00</p>
+            </div>
+
+            <!-- T-Shirt 4 -->
+            <div class="col-4" data-name="cloth t-shirt shirt t-shirt4 apparel" data-price="40">
+                <a href="product-details.html?item=tshirt4"><img src="images/T-shirt4.jpg" alt="T-Shirt 4"></a>
+                <a href="product-details.html?item=tshirt4"><h4>Casual Oversized T-Shirt</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$40.00</p>
+            </div>
+
+            <!-- Watch 1 -->
+            <div class="col-4" data-name="watch luxury accessories watch1" data-price="120">
+                <a href="product-details.html?item=watch1"><img src="images/watch1.jpg" alt="Watch 1"></a>
+                <a href="product-details.html?item=watch1"><h4>Classic Black Dial Watch</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$120.00</p>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="col-4" data-name="watch metallic accessories watch2" data-price="140">
+                <a href="product-details.html?item=watch2"><img src="images/watch2.jpg" alt="Watch 2"></a>
+                <a href="product-details.html?item=watch2"><h4>Metallic Blue Watch</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$140.00</p>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="col-4" data-name="watch leather accessories watch3" data-price="130">
+                <a href="product-details.html?item=watch3"><img src="images/watch3.jpg" alt="Watch 3"></a>
+                <a href="product-details.html?item=watch3"><h4>Brown Leather Strap Watch</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                </div>
+                <p>$130.00</p>
+            </div>
+
+            <!-- Watch 4 -->
+            <div class="col-4" data-name="watch digital accessories watch4" data-price="99">
+                <a href="product-details.html?item=watch4"><img src="images/watch4.jpg" alt="Watch 4"></a>
+                <a href="product-details.html?item=watch4"><h4>Digital Vintage Watch</h4></a>
+                <div class="rating">
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star">&#9733;</span>
+                    <span class="fa star-o">&#9733;</span>
+                </div>
+                <p>$99.00</p>
+            </div>
+        </div>
+
+        <!-- Pagination Buttons -->
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="Play Store">
+                        <img src="images/app-store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="White Logo">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footerhr">
+            <p class="copyright">Copyright 2027 - hrutiktsawant</p>
+        </div>
+    </div>
+
+    <!-- General Script -->
+    <script src="script.js"></script>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

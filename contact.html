@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - RedStore</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+        <style>
+            /* --- MNC Level Contact Page Advanced Styling --- */
+            .contact-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 40px;
+                margin: 60px auto;
+            }
+            .contact-info-card {
+                flex-basis: 42%;
+                background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+                padding: 45px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border-left: 5px solid #ff523b;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .contact-info-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(255, 82, 59, 0.15);
+            }
+            .info-box {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 25px;
+            }
+            .info-icon {
+                background: #ff523b;
+                color: #fff;
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                box-shadow: 0 5px 15px rgba(255, 82, 59, 0.3);
+                transition: transform 0.3s ease;
+            }
+            .info-box:hover .info-icon {
+                transform: scale(1.1) rotate(5deg);
+            }
+            .contact-form-card {
+                flex-basis: 52%;
+                background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+                padding: 45px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border-left: 5px solid #ff523b;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .contact-form-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(255, 82, 59, 0.15);
+            }
+            .form-group {
+                margin-bottom: 22px;
+            }
+            .form-group label {
+                display: block;
+                font-size: 14px;
+                color: #444;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+            .form-group input, .form-group textarea {
+                width: 100%;
+                height: 48px;
+                padding: 0 18px;
+                border: 2px solid #eee;
+                border-radius: 8px;
+                outline: none;
+                font-size: 14px;
+                font-family: 'Poppins', sans-serif;
+                transition: all 0.3s ease;
+            }
+            .form-group textarea {
+                height: 130px;
+                padding-top: 15px;
+                resize: none;
+            }
+            .form-group input:focus, .form-group textarea:focus {
+                border-color: #ff523b;
+                box-shadow: 0 0 10px rgba(255, 82, 59, 0.15);
+                background: #fffafa;
+            }
+            .submit-btn {
+                width: 100%;
+                height: 50px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+                background: linear-gradient(135deg, #ff523b 0%, #e03e28 100%);
+                color: #fff;
+                box-shadow: 0 5px 15px rgba(255, 82, 59, 0.3);
+                transition: all 0.3s ease;
+            }
+            .submit-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(255, 82, 59, 0.4);
+                background: linear-gradient(135deg, #e03e28 0%, #c5301b 100%);
+            }
+            @media only screen and (max-width: 800px) {
+                .contact-wrapper {
+                    flex-direction: column;
+                }
+                .contact-info-card, .contact-form-card {
+                    flex-basis: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px" alt="Logo"></a>            
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="small-container">
+            <h2 class="title">Get In Touch With Us</h2>
+            
+            <div class="contact-wrapper">
+                
+                <!-- Left Box -->
+                <div class="contact-info-card">
+                    <h3 style="color: #222; margin-bottom: 15px; font-size: 26px; font-weight: 600;">Let's build something great together</h3>
+                    <p style="color: #666; margin-bottom: 35px; font-size: 14px; line-height: 1.7;">
+                        Have questions about our products, global shipping, or bulk enterprise orders? Connect with our dedicated support team 24/7[cite: 17].
+                    </p>
+                    
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 16px; color: #333; margin-bottom: 2px;">Headquarters</h4>
+                            <p style="font-size: 13px; color: #777;">123 Bhoom, Maharastra, India[Dharashiv]</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 16px; color: #333; margin-bottom: 2px;">Email Support</h4>
+                            <p style="font-size: 13px; color: #777;">ecomm@redstore.com[Dhrashiv]</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box" style="margin-bottom: 0;">
+                        <div class="info-icon">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 16px; color: #333; margin-bottom: 2px;">Direct Helpline</h4>
+                            <p style="font-size: 13px; color: #777;">+91 98765 xxxx</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Box -->
+                <div class="contact-form-card">
+                    <form onsubmit="event.preventDefault(); alert('Success! Your message has been routed to our support team.');">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="name@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea placeholder="Describe your inquiry in detail..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Secure Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" alt="Play Store">
+                            <img src="images/app-store.png" alt="App Store">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo-white.png" alt="Logo White">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="footerhr">
+                <p class="copyright">Copyright 2027 - hrutiktsawant[cite: 17]</p>
+            </div>
+        </div>
+
+        <!-- General Script -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                } else {
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

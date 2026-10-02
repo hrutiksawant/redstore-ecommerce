@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RedStore - Ecommerce Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px" alt="Logo"></a>            
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="container">
+                <div class="row" style="margin-top: 0px; padding: 50px 0;">
+                    <div class="col-2">
+                        <h1>Give Your Workout <br>A New Style!</h1>
+                        <p>Success isn't always about greatness. It's about consistency. Consistent <br>hard work leads to success. Greatness will come.</p>
+                        <form action="product.html" method="GET" style="margin-top: 20px;">
+                            <input type="text" name="search" placeholder="Search shoes, watch, t-shirt..." style="padding: 10px 20px; border: 2px solid #ff523b; border-radius: 25px; outline: none; width: 60%; max-width: 350px; font-size: 15px;">
+                            <button type="submit" style="padding: 10px 25px; background: #ff523b; color: #fff; border: none; border-radius: 25px; cursor: pointer; font-size: 15px; margin-left: 5px;">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-container" style="margin-top: 70px;">
+            <h2 class="title">Featured Products</h2>
+            <div class="row" id="productRow">
+                <div class="col-4" data-name="cloth t-shirt shirt red printed" data-price="50">
+                    <a href="product-details.html?item=tshirt1"><img src="images/product-1.jpg" alt="T-Shirt"></a>
+                    <a href="product-details.html?item=tshirt1"><h4>Red Printed T-Shirt</h4></a>
+                    <div class="rating">
+                        <span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4" data-name="shoes footwear sneakers hrx sports" data-price="75">
+                    <a href="product-details.html?item=shoes1"><img src="images/product-2.jpg" alt="Shoes"></a>
+                    <a href="product-details.html?item=shoes1"><h4>HRX Sports Shoes</h4></a>
+                    <div class="rating">
+                        <span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star-o">&#9733;</span>
+                    </div>
+                    <p>$75.00</p>
+                </div>
+                <div class="col-4" data-name="watch smart band electronics" data-price="120">
+                    <a href="product-details.html?item=watch1"><img src="images/product-3.jpg" alt="Watch"></a>
+                    <a href="product-details.html?item=watch1"><h4>Smart Watch Band</h4></a>
+                    <div class="rating">
+                        <span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span>
+                    </div>
+                    <p>$120.00</p>
+                </div>
+                <div class="col-4" data-name="cloth pant trackpants genx trouser" data-price="45">
+                    <a href="product-details.html?item=pants"><img src="images/product-4.jpg" alt="Pant"></a>
+                    <a href="product-details.html?item=pants"><h4>GenX Trackpants</h4></a>
+                    <div class="rating">
+                        <span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star">&#9733;</span><span class="fa star-o">&#9733;</span>
+                    </div>
+                    <p>$45.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5"><img src="images/logo-coca-cola.png" alt="Coca-Cola"></div>
+                    <div class="col-5"><img src="images/logo-godrej.png" alt="Godrej"></div>
+                    <div class="col-5"><img src="images/logo-oppo.png" alt="Oppo"></div>
+                    <div class="col-5"><img src="images/logo-paypal.png" alt="PayPal"></div>
+                    <div class="col-5"><img src="images/logo-philips.png" alt="Philips"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" alt="Play Store">
+                            <img src="images/app-store.png" alt="App Store">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo-white.png" alt="Logo White">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="footerhr">
+                <p class="copyright">Copyright 2027 - hrutiktsawant</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

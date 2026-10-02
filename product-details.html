@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px" alt="RedStore Logo"></a>             
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Single Product Details -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/shoes1.jpg" width="100%" id="productimg" alt="Product Image">
+                <div class="small-img-row">
+                    <div class="small-img-col"><img src="images/shoes1.jpg" width="100%" class="small-img" alt="Gallery"></div>
+                    <div class="small-img-col"><img src="images/shoes2.jpg" width="100%" class="small-img" alt="Gallery"></div>
+                    <div class="small-img-col"><img src="images/shoes3.jpg" width="100%" class="small-img" alt="Gallery"></div>
+                    <div class="small-img-col"><img src="images/shoes4.jpg" width="100%" class="small-img" alt="Gallery"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p id="productCategory">Home / Footwear</p>
+                <h1 id="productTitle">Stylish Casual Shoes</h1>
+                <h4 id="productPrice">$80.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>UK 7</option>
+                    <option>UK 8</option>
+                    <option>UK 9</option>
+                    <option>UK 10</option>
+                </select>
+                <input type="number" value="1" min="1">
+                <a href="" class="btn">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p id="productDesc">Experience ultimate comfort and enterprise-grade durability with our premium footwear collection designed for all-day wear.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="Play Store">
+                        <img src="images/app-store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="White Logo">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footerhr">
+            <p class="copyright">Copyright 2027 - hrutiktsawant</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemKey = urlParams.get('item');
+
+        const productImg = document.getElementById("productimg");
+        const productTitle = document.getElementById("productTitle");
+        const productPrice = document.getElementById("productPrice");
+        const productCategory = document.getElementById("productCategory");
+        const productDesc = document.getElementById("productDesc");
+
+        const productsData = {
+            'shoes1': { img: 'images/shoes1.jpg', title: 'Stylish Casual Shoes', price: '$80.00', cat: 'Home / Footwear', desc: 'Experience ultimate comfort and durability with our stylish casual shoes designed for everyday streetwear.' },
+            'shoes2': { img: 'images/shoes2.jpg', title: 'Classic Formal Shoes', price: '$95.00', cat: 'Home / Footwear', desc: 'Step into corporate excellence with our classic formal leather shoes tailored for professional elegance.' },
+            'shoes3': { img: 'images/shoes3.jpg', title: 'Sporty White Sneakers', price: '$85.00', cat: 'Home / Footwear', desc: 'Lightweight and dynamic sporty white sneakers built for maximum agility and casual style.' },
+            'shoes4': { img: 'images/shoes4.jpg', title: 'Premium Leather Shoes', price: '$110.00', cat: 'Home / Footwear', desc: 'Crafted from genuine high-grade leather, offering unmatched sophistication and class.' },
+            'tshirt1': { img: 'images/T-shirt1.jpg', title: 'Classic Polo T-Shirt', price: '$45.00', cat: 'Home / Apparel', desc: 'Upgrade your casual wardrobe with breathable cotton fabric and timeless polo styling.' },
+            'tshirt2': { img: 'images/T-shirt2.jpg', title: 'Slim Fit Black T-Shirt', price: '$50.00', cat: 'Home / Apparel', desc: 'Sleek and modern slim fit black t-shirt designed for an athletic, sharp silhouette.' },
+            'tshirt3': { img: 'images/T-shirt3.jpg', title: 'Graphic Printed T-Shirt', price: '$55.00', cat: 'Home / Apparel', desc: 'Express your bold personality with high-definition graphic prints and ultra-soft cotton.' },
+            'tshirt4': { img: 'images/T-shirt4.jpg', title: 'Casual Oversized T-Shirt', price: '$40.00', cat: 'Home / Apparel', desc: 'Embrace contemporary streetwear trends with our relaxed and comfortable oversized fit.' },
+            'watch1': { img: 'images/watch1.jpg', title: 'Classic Black Dial Watch', price: '$120.00', cat: 'Home / Accessories', desc: 'A sophisticated timepiece featuring a striking black dial and durable stainless steel strap.' },
+            'watch2': { img: 'images/watch2.jpg', title: 'Metallic Blue Watch', price: '$140.00', cat: 'Home / Accessories', desc: 'Make a bold statement with this premium metallic blue watch engineered for precision.' },
+            'watch3': { img: 'images/watch3.jpg', title: 'Brown Leather Strap Watch', price: '$130.00', cat: 'Home / Accessories', desc: 'Classic vintage aesthetics combined with modern quartz movement and genuine leather.' },
+            'watch4': { img: 'images/watch4.jpg', title: 'Digital Vintage Watch', price: '$99.00', cat: 'Home / Accessories', desc: 'Retro digital styling equipped with modern chronographs, alarms, and illumination.' }
+        };
+
+        if (itemKey && productsData[itemKey]) {
+            productImg.src = productsData[itemKey].img;
+            productTitle.innerText = productsData[itemKey].title;
+            productPrice.innerText = productsData[itemKey].price;
+            productCategory.innerText = productsData[itemKey].cat;
+            productDesc.innerText = productsData[itemKey].desc;
+        }
+    </script>
+</body>
+</html>
